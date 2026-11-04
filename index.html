@@ -106,11 +106,8 @@ textarea{min-height:110px;resize:vertical}
 .radio-pill input{width:auto;margin-right:6px;accent-color:var(--emerald)}
 .form-note{font-size:.88rem;color:var(--muted)}
 .success{background:var(--emerald-light);border:1px solid var(--line);border-radius:14px;padding:16px;display:none}
-footer{background:var(--emerald);color:#d9efe3;padding:36px 0 132px}
+footer{background:var(--emerald);color:#d9efe3;padding:36px 0}
 footer a{color:#fff;font-weight:700}
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb, var(--bg) 94%, transparent);backdrop-filter:blur(12px);border-top:1px solid var(--line);box-shadow:0 -6px 24px rgba(10,74,54,.10)}
-.sticky-cta .btn{flex:1;padding:12px 14px;font-size:.95rem}
-@media(min-width:760px){.sticky-cta{justify-content:center}.sticky-cta .btn{flex:0 1 300px}}
 .promo-overlay{position:fixed;inset:0;z-index:100;background:rgba(10,32,24,.55);display:none;align-items:center;justify-content:center;padding:20px}
 .promo-overlay.show{display:flex}
 .promo-card{position:relative;background:var(--bg-card);color:var(--ink);border:2px solid var(--gold-2);border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.3);max-width:400px;width:100%;padding:30px 24px 24px;text-align:center;max-height:calc(100dvh - 130px);overflow:auto}
@@ -316,8 +313,6 @@ footer a{color:#fff;font-weight:700}
 <a class="btn btn-primary btn-block" id="promoCta" href="https://m.me/FortMcMurrayWebAI" target="_blank" rel="noopener">Message us on Messenger</a>
 </div>
 </div>
-
-<div class="sticky-cta"><a class="btn btn-gold" href="https://m.me/FortMcMurrayWebAI" target="_blank" rel="noopener">Free Sample</a><a class="btn btn-primary" href="#quote">Get a Quote</a></div>
 
 <script>
 document.querySelectorAll('.faq-q').forEach(function(btn){
