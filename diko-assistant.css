@@ -1,0 +1,64 @@
+/* DikoWebAI — "Ask Diko" website assistant widget
+   Emerald / gold / cream theme matched to dikowebai.ca. No external assets. */
+.diko-asst{--diko-emerald:#0a4a36;--diko-emerald-2:#0e6b4f;--diko-gold:#c98a12;--diko-gold-2:#f5b81f;--diko-cream:#fffaf0;--diko-soft:#f6fbf8;--diko-ink:#14201b;--diko-muted:#5b6b64;--diko-line:#dce8e1;
+  position:fixed;right:18px;bottom:18px;z-index:90;font-family:"Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--diko-ink)}
+.diko-asst *{box-sizing:border-box}
+
+/* ---- Launcher button (collapsed) ---- */
+.diko-launcher{display:flex;align-items:center;gap:9px;background:#ffffff;border:1px solid var(--diko-line);
+  border-radius:999px;padding:6px 16px 6px 6px;cursor:pointer;box-shadow:0 12px 32px rgba(10,74,54,.22);
+  font:inherit;font-weight:800;font-size:15px;color:var(--diko-emerald);transition:transform .15s ease,box-shadow .15s ease}
+.diko-launcher:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(10,74,54,.28)}
+.diko-launcher img{width:44px;height:44px;border-radius:50%;display:block;object-fit:cover;background:var(--diko-cream)}
+.diko-launcher .diko-dot{width:9px;height:9px;border-radius:50%;background:#22a06b;flex:none;box-shadow:0 0 0 3px #e6f4ec}
+.diko-asst.open .diko-launcher{display:none}
+
+/* ---- One-time greeting bubble ---- */
+.diko-greet{position:absolute;right:0;bottom:72px;width:270px;max-width:calc(100vw - 36px);background:#ffffff;
+  border:1px solid var(--diko-line);border-radius:16px;border-bottom-right-radius:4px;padding:13px 34px 13px 14px;
+  box-shadow:0 14px 36px rgba(10,74,54,.20);font-size:14px;line-height:1.45;cursor:pointer;
+  opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+.diko-greet.show{opacity:1;transform:none;pointer-events:auto}
+.diko-greet b{color:var(--diko-emerald)}
+.diko-greet-close{position:absolute;top:6px;right:8px;border:none;background:none;font-size:16px;line-height:1;color:var(--diko-muted);cursor:pointer;padding:2px}
+.diko-asst.open .diko-greet{display:none}
+
+/* ---- Chat panel ---- */
+.diko-panel{display:none;flex-direction:column;width:360px;max-width:calc(100vw - 24px);height:540px;max-height:calc(100dvh - 110px);
+  background:#ffffff;border:1px solid var(--diko-line);border-radius:20px;overflow:hidden;box-shadow:0 24px 60px rgba(10,32,24,.30)}
+.diko-asst.open .diko-panel{display:flex}
+.diko-head{background:linear-gradient(135deg,var(--diko-emerald) 0%,var(--diko-emerald-2) 100%);color:#fff;padding:13px 14px;display:flex;align-items:center;gap:11px;flex:none}
+.diko-head img{width:42px;height:42px;border-radius:50%;background:var(--diko-cream);display:block;object-fit:cover}
+.diko-head .diko-title{font-weight:800;font-size:15.5px;line-height:1.2}
+.diko-head .diko-sub{font-size:12px;opacity:.88;line-height:1.3}
+.diko-head .diko-sub .on{color:var(--diko-gold-2);font-weight:700}
+.diko-close{margin-left:auto;background:rgba(255,255,255,.14);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:17px;cursor:pointer;flex:none}
+.diko-close:hover{background:rgba(255,255,255,.26)}
+
+.diko-msgs{flex:1;overflow-y:auto;padding:14px 12px;background:var(--diko-soft);display:flex;flex-direction:column;gap:9px}
+.diko-msg{max-width:88%;padding:10px 13px;border-radius:16px;font-size:14px;line-height:1.5;white-space:pre-line;word-wrap:break-word}
+.diko-msg.bot{background:#ffffff;border:1px solid var(--diko-line);border-bottom-left-radius:5px;align-self:flex-start}
+.diko-msg.user{background:var(--diko-emerald);color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
+.diko-msg .diko-cta{display:inline-block;margin-top:9px;background:var(--diko-emerald);color:#fff;text-decoration:none;
+  font-weight:700;font-size:13.5px;padding:8px 14px;border-radius:999px}
+.diko-msg .diko-cta:hover{background:var(--diko-emerald-2)}
+
+.diko-chips{display:flex;flex-wrap:wrap;gap:7px;padding:10px 12px 2px;background:var(--diko-soft)}
+.diko-chip{border:1.5px solid var(--diko-emerald-2);color:var(--diko-emerald);background:#fff;border-radius:999px;
+  padding:6px 12px;font:inherit;font-size:12.5px;font-weight:700;cursor:pointer}
+.diko-chip:hover{background:#e6f4ec}
+
+.diko-inputrow{display:flex;gap:8px;padding:11px 12px;border-top:1px solid var(--diko-line);background:#fff;flex:none}
+.diko-inputrow input{flex:1;border:1.5px solid var(--diko-line);border-radius:999px;padding:10px 15px;font:inherit;font-size:14px;outline:none;min-width:0}
+.diko-inputrow input:focus{border-color:var(--diko-emerald-2)}
+.diko-send{background:var(--diko-gold);border:none;color:#231a00;font:inherit;font-weight:800;font-size:14px;border-radius:999px;padding:10px 17px;cursor:pointer;flex:none}
+.diko-send:hover{background:var(--diko-gold-2)}
+
+.diko-foot{padding:8px 14px 11px;font-size:11px;line-height:1.45;color:var(--diko-muted);background:#fff;text-align:center;flex:none}
+
+@media (max-width:480px){
+  .diko-asst{right:12px;bottom:12px}
+  .diko-panel{height:70dvh;max-height:70dvh}
+  .diko-launcher{font-size:14px;padding:5px 13px 5px 5px}
+  .diko-launcher img{width:38px;height:38px}
+}
