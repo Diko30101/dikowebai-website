@@ -145,9 +145,9 @@
   root.className = 'diko-asst';
   root.innerHTML =
     '<div class="diko-greet" role="button" tabindex="0"><button class="diko-greet-close" aria-label="Dismiss">&times;</button>' + GREETING + '</div>' +
-    '<button class="diko-launcher" aria-label="Ask Diko — chat with the DikoWebAI assistant"><img src="diko-icon.png" alt=""><span class="diko-dot"></span>Ask Diko</button>' +
+    '<button class="diko-launcher" aria-label="Ask Diko — chat with the DikoWebAI assistant"><img src="diko-avatar.png" alt=""><span class="diko-dot"></span>Ask Diko</button>' +
     '<div class="diko-panel" role="dialog" aria-label="Chat with Diko, the DikoWebAI assistant">' +
-      '<div class="diko-head"><img src="diko-icon.png" alt="">' +
+      '<div class="diko-head"><img src="diko-avatar.png" alt="">' +
         '<div><div class="diko-title">Diko — DikoWebAI Assistant</div><div class="diko-sub"><span class="on">\u25CF</span> Answers instantly \u2022 24/7</div></div>' +
         '<button class="diko-close" aria-label="Close chat">&times;</button></div>' +
       '<div class="diko-msgs"></div>' +
